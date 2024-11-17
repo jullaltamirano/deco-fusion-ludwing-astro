@@ -1,0 +1,27 @@
+---
+
+interface Props {
+   backgroundColor?     : string
+   textColor?           : string
+   rounded?             : string
+   paddingX?            : string
+   paddingY?            : string
+   className?           : string
+   onclick?             : any
+}
+
+const { 
+   backgroundColor            = 'bg-black',
+   textColor                  = 'text-white',
+   rounded                    = 'rounded-sm',
+   paddingX                   = 'px-3',
+   paddingY                   = 'py-1',
+   className                  = '',
+   onclick                    ,
+} = Astro.props
+
+---
+
+<button onclick={ onclick } class={`${ className } ${ paddingX } ${ paddingY } ${ backgroundColor } ${ textColor } ${ rounded }`}>
+   <slot />
+</button>

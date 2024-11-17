@@ -1,0 +1,29 @@
+---
+
+interface Props {
+   backgroundColor?     : string
+   textColor?           : string
+   rounded?             : string
+   paddingX?            : string
+   paddingY?            : string
+   className?           : string
+   href                 : any
+   target?              : any
+}
+
+const { 
+   backgroundColor            = 'bg-black',
+   textColor                  = 'text-white',
+   rounded                    = 'rounded-sm',
+   paddingX                   = 'px-3',
+   paddingY                   = 'py-1',
+   className                  = '',
+   href                       = '/',
+   target                     = '',
+} = Astro.props
+
+---
+
+<a href={ href } target={ target } class={`${ className } ${ paddingX } ${ paddingY } ${ backgroundColor } ${ textColor } ${ rounded }`}>
+   <slot />
+</a>

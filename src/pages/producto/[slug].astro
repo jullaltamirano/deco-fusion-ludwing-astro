@@ -1,0 +1,48 @@
+---
+import { products, type Product } from "../../porcelanatoData"
+
+import Layout from "../../layouts/Layout.astro"
+import { ProductDetail } from "../../components/ProductDetailComponents/ProductDetail"
+import { ProductCard } from "../../components/ProductsComponents/ProductCard"
+
+const { slug } = Astro.params
+
+const product = products.find( ( pr: Product ) => pr.slug === slug )
+
+export const getStaticPaths = (() => {
+   const productSlugs = products.map(el => (
+      { params: { slug: el.slug } }
+   ))
+
+   return productSlugs
+})
+
+---
+<Layout title={ `DecoStudio - ${ product?.modelo?.slice(0, 1) }${ product?.modelo?.slice(1).toLowerCase() }` || '404 Not Found' }>
+   <section>
+   <div class='max-w-[1200px] mx-auto my-6 lg:px-12 sm:px-16 px-6'>
+      { 
+         product && ( 
+         <ProductDetail client:visible
+            product={ product } 
+         /> ) 
+      }
+      <div class='mt-6 border-t-[1px] border-neutral-300 pt-6'>
+         <span class='block text-2xl font-semibold text-center mb-4'>TAMBIÉN TE PODRÍA INTERESAR</span>
+         <div class='grid grid-cols-6 gap-5'>
+            {
+               products.sort(() => Math.random() - 0.5).slice(0, 3).map(( pr: Product ) => (
+                  <ProductCard client:visible 
+                     imagen={ pr.imagen } 
+                     modelo={ pr.modelo } 
+                     formato={ pr.formato } 
+                     slug={ pr.slug } 
+                     precio={ pr.precio } 
+                  />
+               ) )
+            }
+         </div>
+      </div>
+   </div>
+   </section>
+</Layout>

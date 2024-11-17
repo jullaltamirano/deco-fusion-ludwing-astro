@@ -1,0 +1,41 @@
+---
+
+interface NavigatonMenu {
+   path: string
+   label: string
+}
+
+const navigatonMenu: NavigatonMenu[] = [
+   { path: '/', label: 'INICIO' },
+   { path: '/nosotros', label: 'NOSOTROS' },
+   { path: '/productos', label: 'PRODUCTOS' },
+   { path: '/venta-corporativa', label: 'VENTA CORPORATIVA' },
+]
+
+---
+
+<footer class='bg-black'>
+   <div class='grid lg:grid-cols-2 grid-cols-1 max-w-[1100px] lg:px-12 sm:px-32 px-8 mx-auto py-12'>
+      <div class='col-span-1'>
+         <img src='/logo_blanco.png' class='lg:mx-0 mx-auto md:w-[300px] w-[200px]' width='200px' />
+      </div>
+      <div class='col-span-1 text-neutral-300 lg:mt-0 mt-6'>
+         <div class='flex flex-col items-center lg:items-end font-semibold'>
+            {/* MENU NAVEGACION */}
+            <div class='mb-3 flex md:flex-row flex-col text-center gap-4'>
+               {
+                  navigatonMenu.map(( nav: NavigatonMenu ) => ( <a href={ nav.path }>{ nav.label }</a> ))
+               }
+            </div>
+
+            {/* CONTACTO */}
+            <div class='lg:mt-0 mt-6'>
+               <span class='block text-center lg:text-right border-b-[1px] border-neutral-300'>CONTACTO</span>
+               <span class='block text-center lg:text-right mt-2'>CEL: +51 922 231 550</span>
+               <span class='block text-center lg:text-right mt-2'>CORREO: decofusionac@gmail.com</span>
+               <a href="/public/DecoFusion - Catalogo.pdf" download target="_blank"><span class='block text-center lg:text-right mt-4'>VER CATÁLOGO VIRTUAL</span></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>

@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+
+interface Valor {
+   icon           : string,
+   label          : string
+}
+
+const valores: Valor[] = [
+   { 
+      icon        : '/icons/respeto_icon.png', 
+      label       : 'RESPETO'
+   },
+   { 
+      icon        : '/icons/calidad_icon.png', 
+      label       : 'CALIDAD'
+   },
+   { 
+      icon        : '/icons/honestidad_icon.png', 
+      label       : 'HONESTIDAD'
+   },
+   { 
+      icon        : '/icons/sabiduria_icon.png', 
+      label       : 'SABIDURÍA'
+   },
+   { 
+      icon        : '/icons/compromiso_icon.png', 
+      label       : 'COMPROMISO'
+   }
+]
+
+---
+<Layout title="DecoStudio - Nosotros">
+   <section>
+      <div class='max-w-[1100px] mx-auto lg:px-12 sm:px-16 px-6'>
+         <div class='grid grid-cols-1 lg:grid-cols-2 py-4 gap-8 mt-4 lg:gap-12 lg:mt-8'>
+            <div class="col-span-1">
+               <h4 class='font-semibold text-3xl'>INNOVACI&Oacute;N, COMPROMISO Y GARANT&Iacute;A</h4>
+               <span class="block mt-4">
+                  Somos una empresa focalizada en la innovaci&oacute;n de diseños y materiales para acabados y revestimientos, por ello, estamos comprometidos con cada uno de nuestros clientes en brindar un servicio personalizado, a la altura de sus
+                  expectativas. Nos complace abrir las puertas a nuevas tendencias y facilitar las herramientas necesarias para que nuestros clientes puedan alcanzar sus proyectos de la mejor manera. Mirando al futuro, pero conscientes del pasado,
+                  combinando tradici&oacute;n y modernidad, belleza y tecnolog&iacute;a, sostenibilidad y calidad, a trav&eacute;s de un proceso continuo de renovaci&oacute;n y soluciones combinadas con altas prestaciones t&eacute;cnicas y est&eacute;ticas.
+               </span>
+            </div>
+            <div class="col-span-1 flex items-center">
+               <img class="w-full" src='/about_us_img.jpg' />
+            </div>
+         </div>
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-1 md:mt-8">
+            <div class="bg-neutral-700 text-center text-white p-6">
+               <h5 class="font-semibold text-xl">MISI&Oacute;N</h5>
+               <span class="block mt-4">Ofrecer productos de alta calidad y tecnolog&iacute;a que innoven en satisfacer las necesidades de nuestros clientes. Aportando valor excepcional a trav&eacute;s de nuestros servicios especializados.</span>
+            </div>
+            <div class="bg-neutral-700 text-center text-white p-6">
+               <h5 class="font-semibold text-xl">VISI&Oacute;N</h5>
+               <span class="block mt-4">Ser una empresa referente en calidad de productos y servicios como la mejor alternativa a la satisfacci&oacute;n de nuestros clientes.</span>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="border-t-[1px] border-neutral-400 my-10">
+      <div class='max-w-[1100px] mx-auto mt-6 lg:px-12 sm:px-16 px-6'>
+         <h4 class='md:inline block font-semibold text-2xl md:text-left text-center md:mr-16'>VALORES DECO FUSI&Oacute;N</h4>
+         <img class="md:inline hidden" src='/icons/gray_line.jpg' />
+         <div class="bg-neutral-300 flex justify-center flex-wrap mt-6 p-8 gap-8 lg:gap-16">
+            {
+               valores.map((val: Valor) => (
+                  <div class="flex flex-col items-center gap-2">
+                     <img src={ val.icon } class="w-[90px] h-[95px]" />
+                     <span class="text-lg">{ val.label }</span>
+                  </div>
+               ))
+            }
+         </div>
+      </div>
+   </section>
+</Layout>

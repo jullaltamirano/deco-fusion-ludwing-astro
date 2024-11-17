@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { CarritoCompras } from "../components/CarritoComponents/CarritoCompras";
+---
+
+<Layout title='DecoFusion - Lista de Deseos'>
+   <section>
+      <div class='max-w-[1100px] mx-auto lg:px-12 sm:px-16 px-6'>
+         <CarritoCompras client:visible />
+      </div>
+   </section>
+</Layout>

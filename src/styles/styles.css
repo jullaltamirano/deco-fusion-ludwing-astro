@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   background-color: rgb(245, 245, 245);
+}
+
+.lanzamientos-banner {
+   background-image: url('/img_1_prov.jpg');
+   background-size: cover;
+   background-position: top;
+}
+
+.lanzamientos-resumen-final {
+   background-image: url('/img_2_prov.jpg');
+   background-size: cover;
+   background-position: center;
+}
+
+.hexagon {
+   clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+}
+
+/* COLECCIONES HOME */
+
+.coleccion-1 {
+   background-image: url('/coleccion_1.jpg');
+   background-size: cover;
+   background-position: center;
+}
+
+.coleccion-2 {
+   background-image: url('/coleccion_2.jpg');
+   background-size: cover;
+   background-position: center;
+}
+
+.coleccion-3 {
+   background-image: url('/coleccion_3.jpg');
+   background-size: cover;
+   background-position: center;
+}
