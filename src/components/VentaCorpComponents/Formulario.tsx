@@ -52,8 +52,8 @@ export const Formulario = () => {
 
       const htmlContent = `<html><head></head><body><h2>DECOFUSION - VENTA CORPORATIVA</h2><p>Ha recibido un nuevo mensaje a su página web</p><p><b>Nombres:</b> <span>${ form.nombres }<span></p><p><b>Apellidos:</b> <span>${ form.apellidos }<span></p><p><b>Empresa:</b> <span>${ form.empresa }<span></p><p><b>Email:</b> <span>${ form.email }</span></p><p><b>Telefono:</b> <span>${ form.telefono }</span></p><p><b>Distrito:</b> <span>${ form.distrito }</span></p><p><b>Mensaje:</b> <span>${ form.mensaje }</span></p></body></html>`;
       const body = {
-         sender: { name: 'DecoFusion', email: 'jullaltamiranop1@gmail.com' },
-         to: [{ email: 'jullaltamiranop1@gmail.com', name: 'DecoFusion' }],
+         sender: { name: 'DecoFusion', email: 'decofusionac@gmail.com' },
+         to: [{ email: 'decofusionac@gmail.com', name: 'DecoFusion' }],
          subject: 'DecoFusion Venta Corporativa',
          htmlContent: htmlContent,
       };

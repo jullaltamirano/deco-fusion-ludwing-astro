@@ -66,7 +66,7 @@ export const CarritoCompras = () => {
       })
 
       const encodedMessage = encodeURIComponent( message );
-      const whatsappURL = `https://wa.me/+51931748317?text=${ encodedMessage }`;
+      const whatsappURL = `https://wa.me/+51922231550?text=${ encodedMessage }`;
       window.open( whatsappURL, '_blank' );
 
    };
