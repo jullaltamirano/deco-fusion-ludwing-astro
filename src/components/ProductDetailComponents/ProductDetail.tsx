@@ -30,7 +30,7 @@ export const ProductDetail = ( props: Props ) => {
             <img  src={ previewImage } className='h-full' />
          </div>
          <WishlistButton product={ product } />
-         <a href="https://wa.link/3tc64i" target='_blank' className='mx-auto mt-2 flex justify-center items-center w-[220px] bg-green-500 rounded-md px-3 py-1 text-white'>
+         <a href="https://wa.link/cngkco" target='_blank' className='mx-auto mt-2 flex justify-center items-center w-[220px] bg-green-500 rounded-md px-3 py-1 text-white'>
             <FaWhatsapp />&nbsp;<span className='text-sm font-semibold'>Consultar por Whatsapp</span>
          </a>
       </div>
