@@ -59,7 +59,7 @@ export const CarritoCard = ( props: Props ) => {
           <span className="text-xs"><b>Largo:</b> { product.largo }</span>
           <span className="text-xs"><b>Ancho:</b> { product.ancho }</span>
           <span className="text-xs"><b>Total m2:</b> { product.total }</span>
-          <span className="text-xs">{ +product.total } cajas</span>
+          <span className="text-xs">{ +product.cajas } cajas</span>
           <span className="text-red-500 font-semibold">S/ { product.total_costo.toFixed( 2 ) }</span>
         </div>
         <div className="flex justify-center items-center mb-4 sm:mb-0 sm:mr-6">

@@ -13,7 +13,7 @@ const { classImage, text } = Astro.props
    <div class="relative hexagon sm:h-[300px] h-[200px] sm:w-[300px] w-[270px]">
       <div class={ `${ classImage } mb-1 hexagon sm:h-[300px] h-[200px] sm:w-[300px] w-[270px] sm:text-base text-sm` }></div>
       <div class="bg-neutral-800 bg-opacity-70 p-8 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center">
-         <span class="text-white block">{ text }</span>
+         <span class="text-white block sm:text-base text-sm">{ text }</span>
       </div>
    </div>
 </div>

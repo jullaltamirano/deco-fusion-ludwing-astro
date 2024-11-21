@@ -97,7 +97,7 @@ export const CarritoCompras = () => {
             cart && cart.length > 0 && (
                <>
                   <p className="mt-4 text-right text-lg block"><b>Total:</b> S/ { total.toFixed( 2 ) }</p>
-                  <button onClick={ sendWhatsAppMessage } className="flex bg-black text-white text-sm px-6 py-2 rounded-lg items-center font-semibold mx-auto"><FaPaperPlane />&nbsp;&nbsp;Comprar por Whatsapp</button>
+                  <button onClick={ sendWhatsAppMessage } className="flex bg-black text-white text-sm px-6 py-2 rounded-lg items-center font-semibold mx-auto sm:mt-0 mt-4"><FaPaperPlane />&nbsp;&nbsp;Comprar por Whatsapp</button>
                </>
             )
          }
