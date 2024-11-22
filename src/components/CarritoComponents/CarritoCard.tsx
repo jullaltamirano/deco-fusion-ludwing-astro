@@ -42,6 +42,8 @@ export const CarritoCard = ( props: Props ) => {
     });
   }
 
+  console.log(product)
+
   return (
     <div className="rounded-3xl border border-zinc-200 border-opacity-70 shadow-lg flex flex-col sm:flex-row col-span-2 lg:col-span-1">
       <div className="flex justify-center">
@@ -59,8 +61,9 @@ export const CarritoCard = ( props: Props ) => {
           <span className="text-xs"><b>Largo:</b> { product.largo }</span>
           <span className="text-xs"><b>Ancho:</b> { product.ancho }</span>
           <span className="text-xs"><b>Total m2:</b> { product.total }</span>
+          <span className="text-xs"><b>Precio x m2:</b> S/ { product.precio }</span>
           <span className="text-xs">{ +product.cajas } cajas</span>
-          <span className="text-red-500 font-semibold">S/ { product.total_costo.toFixed( 2 ) }</span>
+          <span className="text-red-500 font-semibold">S/ { product.total_costo.toFixed( 2 ) } <span className="text-xs">(Valor por el Total mt<sup>2</sup>)</span></span>
         </div>
         <div className="flex justify-center items-center mb-4 sm:mb-0 sm:mr-6">
           <button onClick={ deleteFromCart } className="rounded-md border border-zinc-200 p-2 hover:bg-red-100 hover:border-red-100 hover:scale-105 transition"><FaTrash className="text-red-500" /></button>

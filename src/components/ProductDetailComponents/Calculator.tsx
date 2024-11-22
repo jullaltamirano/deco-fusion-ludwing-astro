@@ -59,7 +59,7 @@ export const Calculator = ( props: Props ) => {
             ...formCalculator,
             total: ( +formCalculator.largo * +formCalculator.ancho ).toFixed( 2 ),
             cajas: Math.ceil(( +formCalculator.largo * +formCalculator.ancho ) / +product.m2_por_caja ),
-            total_costo: Math.ceil(( +formCalculator.largo * +formCalculator.ancho ) / +product.m2_por_caja ) * +product.precio
+            total_costo: Math.ceil( +formCalculator.largo * +formCalculator.ancho ) * +product.precio
          }]
       }
 
