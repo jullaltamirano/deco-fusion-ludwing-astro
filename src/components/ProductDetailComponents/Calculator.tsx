@@ -107,6 +107,9 @@ export const Calculator = ( props: Props ) => {
             <div className='flex justify-center lg:justify-start items-center'>
                <BsInfoCircleFill className='text-[14px]' />&nbsp;<span className='text-xs lg:text-sm'>Sugerimos agregar el 10% por merma</span>
             </div>
+            <div className='flex justify-center lg:justify-start items-center'>
+               <BsInfoCircleFill className='text-[14px]' />&nbsp;<span className='text-xs lg:text-sm'>Consulte por nuestro servicio de instalación</span>
+            </div>
             <div className='flex justify-center lg:justify-start  items-center mt-2'>
                <FaArrowAltCircleDown className='text-[14px]' />&nbsp;<span className='text-xs lg:text-sm font-semibold'>Añade las cajas que necesites</span>
             </div>
